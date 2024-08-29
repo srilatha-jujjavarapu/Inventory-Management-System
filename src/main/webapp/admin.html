@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Card Buttons</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  /* Container for card buttons */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+    justify-content: center;
+    align-items: center;
+    max-width: 340px; /* Set a max-width to avoid overflow */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+
+  /* Card button styling */
+  .card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 150px; /* Fixed height for cards */
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+  /* Card button colors */
+  .card-button:nth-child(1) { background-color: #4CAF50; } /* Green */
+  .card-button:nth-child(2) { background-color: #2196F3; } /* Blue */
+  .card-button:nth-child(3) { background-color: #f44336; } /* Amber */
+  .card-button:nth-child(4) { background-color: #FFC107; } /* Red */
+
+  /* Card button hover effects */
+  .card-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  /* Card button active state */
+  .card-button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+  <div class="card-container">
+    <a href="SecondServlet?button=add" class="card-button">Add</a>
+    <a href="SecondServlet?button=update" class="card-button">Update</a>
+    <a href="SecondServlet?button=delete" class="card-button">Delete</a>
+    <a href="SecondServlet?button=view" class="card-button">View</a>
+  </div>
+</body>
+</html>

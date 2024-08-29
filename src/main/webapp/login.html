@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .login-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: left;
+    }
+    .login-container h2 {
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+    }
+    .login-container label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 30px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .login-container button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        margin-bottom : 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .login-container button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <div class="login-container">
+        <p style="font-size : 30px; font-family: Arial,sans-serif; text-align:center;"><b>Login</b></p>
+        <form action="LoginServlet">
+            <label for="uname">UserName:</label>
+            <input type="text" id="uname" name="uname"><br>
+            <label for="upass">Password:</label>
+            <input type="password" id="upass" name="upass"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

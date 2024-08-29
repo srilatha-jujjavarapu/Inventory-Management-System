@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            max-width: 300px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 24px;
+            color: #e74c3c; /* Red color for heading */
+            margin-bottom: 20px;
+            text-align: center; /* Center the heading */
+        }
+        label {
+            font-size: 16px;
+            color: #555; /* Darker color for labels */
+            margin-bottom: 8px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #e74c3c; /* Red color */
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            align-self: center; /* Center the button */
+        }
+        button[type="submit"]:hover {
+            background-color: #c0392b; /* Darker red for hover */
+        }
+    </style>
+</head>
+<body>
+    <form action="DeleteServlet">
+        <h1>Delete Product</h1>
+        <label for="id">Product ID:</label>
+        <input type="text" id="id" name="id" required><br>
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>
